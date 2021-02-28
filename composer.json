@@ -1,0 +1,30 @@
+{
+    "name": "vendor/my-laravel-package",
+    "description": "Tutorila on how to build a Laravel package",
+    "type": "library",
+    "license": "MIT",
+    "require-dev": {
+        "orchestra/testbench": "^6.13",
+        "phpunit/phpunit": "^9.5"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Vendor\\MyLaravelPackage\\": "src"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "Vendor\\MyLaravelPackage\\Tests\\": "tests"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vendor\\MyLaravelPackage\\MyServiceProvider"
+            ]
+        }
+    }
+}
